@@ -1,6 +1,6 @@
-{ComponentRegistry} = require 'nylas-exports'
+{ComponentRegistry, WorkspaceStore} = require 'nylas-exports'
 
-MyComposerButton = require './my-composer-button'
+EventsCalendarButton = require './events-calendar-button'
 MyMessageSidebar = require './my-message-sidebar'
 
 module.exports =
@@ -8,8 +8,8 @@ module.exports =
   # saved state using `serialize` it is provided.
   #
   activate: (@state) ->
-    ComponentRegistry.register MyComposerButton,
-      role: 'Composer:ActionButton'
+    ComponentRegistry.register EventsCalendarButton,
+      location: WorkspaceStore.Location.RootSidebar.Toolbar
 
     ComponentRegistry.register MyMessageSidebar,
       role: 'MessageListSidebar:ContactCard'
@@ -26,5 +26,5 @@ module.exports =
   # subscribing to events, release them here.
   #
   deactivate: ->
-    ComponentRegistry.unregister(MyComposerButton)
+    ComponentRegistry.unregister(EventsCalendarButton)
     ComponentRegistry.unregister(MyMessageSidebar)
