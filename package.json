@@ -1,0 +1,15 @@
+{
+  "name": "n1-events-calendar",
+  "main": "./lib/main",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nerdenough/n1-events-calendar.git"
+  },
+  "engines": {
+    "nylas": ">=0.4.14-53cd69b"
+  },
+  "description": "An events calendar plugin for Nylas N1",
+  "dependencies": {},
+  "license": "MIT"
+}
