@@ -21,8 +21,13 @@ class EventsCalendarButton extends React.Component
   _onClick: =>
     BrowserWindow = require('electron').remote.BrowserWindow
     w = new BrowserWindow
-      title: 'N1 Events Calendar',
-      width: 720,
+      title: 'N1 Events Calendar'
+      width: 720
       height: 480
+
+    # Display calendar.html in the window
+    path = require 'path'
+    url = path.join __dirname, '..', 'public', 'calendar.html'
+    w.loadUrl "file://#{url}"
 
 module.exports = EventsCalendarButton
