@@ -14,11 +14,9 @@ class EventsCalendarButton extends React.Component
     draftClientId: React.PropTypes.string.isRequired
 
   render: =>
-    <div className="events-calendar">
-      <button className="btn btn-toolbar" onClick={ => @_onClick()} ref="button">
-        Calendar
-      </button>
-    </div>
+    <button className="btn btn-toolbar item-events-calendar" onClick={ => @_onClick()} ref="button">
+      Calendar
+    </button>
 
   _onClick: =>
     BrowserWindow = require('electron').remote.BrowserWindow
