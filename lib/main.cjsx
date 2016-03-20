@@ -1,7 +1,6 @@
 {ComponentRegistry, WorkspaceStore} = require 'nylas-exports'
 
 EventsCalendarButton = require './events-calendar-button'
-MyMessageSidebar = require './my-message-sidebar'
 
 module.exports =
   # Activate is called when the package is loaded. If your package previously
@@ -10,9 +9,6 @@ module.exports =
   activate: (@state) ->
     ComponentRegistry.register EventsCalendarButton,
       location: WorkspaceStore.Location.RootSidebar.Toolbar
-
-    ComponentRegistry.register MyMessageSidebar,
-      role: 'MessageListSidebar:ContactCard'
 
   # Serialize is called when your package is about to be unmounted.
   # You can return a state object that will be passed back to your package
@@ -27,4 +23,3 @@ module.exports =
   #
   deactivate: ->
     ComponentRegistry.unregister(EventsCalendarButton)
-    ComponentRegistry.unregister(MyMessageSidebar)

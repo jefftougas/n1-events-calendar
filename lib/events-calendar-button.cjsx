@@ -27,7 +27,7 @@ class EventsCalendarButton extends React.Component
 
     # Display calendar.html in the window
     path = require 'path'
-    url = path.join __dirname, '..', 'public', 'calendar.html'
+    url = path.join __dirname, '..', 'calendar.html'
     w.loadUrl "file://#{url}"
 
 module.exports = EventsCalendarButton
