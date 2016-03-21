@@ -22,8 +22,8 @@ class EventsCalendarButton extends React.Component
     BrowserWindow = require('electron').remote.BrowserWindow
     w = new BrowserWindow
       title: 'N1 Events Calendar'
-      width: 720
-      height: 480
+      width: 960
+      height: 640
 
     # Display calendar.html in the window
     path = require 'path'
